@@ -1,5 +1,5 @@
 MLN + OpenStack Havana + Ubuntu 12.04
-===
+======================================
 
 This MLN repository is particularly aimed at using MLN as root on an Ubuntu
 12.04 system, managing instances on OpenStack Havana or Amazon EC2.
