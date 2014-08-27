@@ -26,12 +26,19 @@ Installation
 * Install the nova command-line tools::
 
    apt-get install python-novaclient
-   
+
+* Download MLN if you haven't already::
+
+   git clone https://github.com/kybeg/mln.git
+
 * Install MLN (Choose: Entire system, do not download any templates. Keep the rest default. )::
 
+   cd mln
    ./mln setup
 
+* Verify that MLN and the plugins are installed
 
+   mln write_config
 
 
    
