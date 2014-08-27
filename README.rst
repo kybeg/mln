@@ -36,7 +36,7 @@ Installation
    cd mln
    ./mln setup
 
-* Verify that MLN and the plugins are installed
+* Verify that MLN and the plugins are installed::
 
    mln write_config
 
