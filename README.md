@@ -11,25 +11,25 @@ appropirate nova command-line tools for your OpenStack version.
 Installation
 ============
 
-As root, first add the OpenStack Havan repositories:
+As root, first add the OpenStack Havan repositories::
 
    apt-get install python-software-properties
    add-apt-repository cloud-archive:havana
    apt-get update
    
-Upgrade your system to the latest version:
+Upgrade your system to the latest version::
 
    apt-get upgrade
    apt-get dist-upgrade
    
    reboot
    
-Install the nova command-line tools
+Install the nova command-line tools::
 
    apt-get install python-novaclient
    
 Install MLN (Choose: Entire system, do not download any templates.
-Keep the rest default. )
+Keep the rest default. )::
 
    ./mln setup
 
