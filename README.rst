@@ -1,4 +1,4 @@
-MLN + OpenStack Havana + Ubuntu 12.04
+MLN + OpenStack + Ubuntu 14.04
 ======================================
 
 This MLN repository is particularly aimed at using MLN as root on an Ubuntu
@@ -11,18 +11,7 @@ appropirate nova command-line tools for your OpenStack version.
 Installation
 ============
 
-* As root, first add the OpenStack Havan repositories::
 
-   apt-get install python-software-properties
-   add-apt-repository cloud-archive:havana
-   apt-get update
-   
-* Upgrade your system to the latest version::
-
-   apt-get upgrade
-   apt-get dist-upgrade
-   reboot
-   
 * Install the nova command-line tools::
 
    apt-get install python-novaclient
