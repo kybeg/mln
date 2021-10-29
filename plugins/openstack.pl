@@ -5,7 +5,7 @@
 my $OPENSTACK_USER;
 my $OPENSTACK_PASSWORD; 
 my $OPENSTACK_TENANT; 
-my $OPENSTACK_PLUGIN_VERSION = "0.8";
+my $OPENSTACK_PLUGIN_VERSION = "0.9";
 my $OPENSTACK_URL;
 my $OS_CREDS;
 my $OPENSTACK_MEMBER_ROLE_NAME = "_member_";
@@ -477,7 +477,7 @@ sub openstack_getImageID {
 	return $OPENSTACK_STORE{"image.$image.id"}
     }
     verbose("$PREFIX looking for image $image\n");
-    open(NOVA,"nova $OPENSTACK_CREDS image-list |");
+    open(NOVA,"openstack $OPENSTACK_CREDS image list |");
     while( my $line = <NOVA> ){
 # | 1  |  m1.tiny  |    512    |  
 # | e9005003-1282-4944-adf3-a081b1d43f9a | Ubuntu       | ACTIVE |
@@ -706,7 +706,7 @@ sub openstack_router_gateway_set {
 sub openstack_get_network_id {
     my $network = $_[0];
     
-    open(QUANTUM,"nova $OPENSTACK_CREDS network-list |");
+    open(QUANTUM,"openstack $OPENSTACK_CREDS network list |");
     while( my $line = <QUANTUM> ){
 #	verbose("$PREFIX checking $line");
 	if ( $line =~ /\|\s+(\S+)\s+\|\s+$network\s+/ ){
