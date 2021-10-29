@@ -953,7 +953,7 @@ sub openstack_create_volume {
 	close(SHOW);
     }
     $persistent = "--display-description=Persisitent" if $persistent;
-    open(NOVA,"nova $OPENSTACK_CREDS volume-create $persistent --display-name=$name $size   |") or die("Failed: $!\n");
+    open(NOVA,"openstack $OPENSTACK_CREDS volume create $persistent --size $size $name |") or die("Failed: $!\n");
     while( my $line = <NOVA> ){
 	if ( $line =~ /\sid\s+\|\s+(\S+)\s+/){
 	    verbose("returning volume id:  $1\n");
