@@ -1,4 +1,4 @@
-MLN + OpenStack + Ubuntu 14.04
+MLN + OpenStack + Ubuntu 20.04
 ===
 
 This MLN repository is particularly aimed at using MLN as root on an Ubuntu
